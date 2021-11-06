@@ -71,7 +71,7 @@ export class Router {
       console.log("page function don't exists!");
       return;
     }
-    let hash = "/";
+    let hash = "";
     if (page != 'home') {
       hash = '#' + page;
     }
