@@ -3,13 +3,6 @@
 
 const CACHE_NAME = 'lab-7-starter';
 const urlsToCache = [
-  '/assets/images/icons/0-star.svg',
-  '/assets/images/icons/1-star.svg',
-  '/assets/images/icons/2-star.svg',
-  '/assets/images/icons/3-star.svg',
-  '/assets/images/icons/4-star.svg',
-  '/assets/images/icons/5-star.svg',
-  '/assets/images/icons/arrow-down.png',
   'https://introweb.tech/assets/json/ghostCookies.json',
   'https://introweb.tech/assets/json/birthdayCake.json',
   'https://introweb.tech/assets/json/chocolateChip.json',
@@ -56,12 +49,13 @@ self.addEventListener('fetch', function (event) {
     caches.match(event.request)
       .then(function(response) {
         if (response) {
-          console.log('ServiceWorker respond to request: ', event.request.url);
+          console.log('Cache respond to request: ' + event.request.url);
           return response;
         }
         return fetch(event.request).then(function(response) {
           return caches.open(CACHE_NAME).then(function(cache) {
             cache.put(event.request, response.clone());
+            console.log('URL ' + event.request.url + ' added to cache');
             return response;
           });
         });
