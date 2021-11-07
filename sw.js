@@ -3,13 +3,13 @@
 
 const CACHE_NAME = 'lab-7-starter';
 const urlsToCache = [
-  'assets/images/icons/0-star.svg',
-  'assets/images/icons/1-star.svg',
-  'assets/images/icons/2-star.svg',
-  'assets/images/icons/3-star.svg',
-  'assets/images/icons/4-star.svg',
-  'assets/images/icons/5-star.svg',
-  'assets/images/icons/arrow-down.png',
+  '/assets/images/icons/0-star.svg',
+  '/assets/images/icons/1-star.svg',
+  '/assets/images/icons/2-star.svg',
+  '/assets/images/icons/3-star.svg',
+  '/assets/images/icons/4-star.svg',
+  '/assets/images/icons/5-star.svg',
+  '/assets/images/icons/arrow-down.png',
   'https://introweb.tech/assets/json/ghostCookies.json',
   'https://introweb.tech/assets/json/birthdayCake.json',
   'https://introweb.tech/assets/json/chocolateChip.json',
